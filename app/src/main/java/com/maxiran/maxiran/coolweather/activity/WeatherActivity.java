@@ -11,6 +11,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import com.maxiran.maxiran.coolweather.R;
 import com.maxiran.maxiran.coolweather.util.HttpCallbackListener;
 import com.maxiran.maxiran.coolweather.util.HttpUtil;
