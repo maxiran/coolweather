@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.maxiran.maxiran.coolweather.R;
+import com.maxiran.maxiran.coolweather.service.AutoUpdateService;
 import com.maxiran.maxiran.coolweather.util.HttpCallbackListener;
 import com.maxiran.maxiran.coolweather.util.HttpUtil;
 import com.maxiran.maxiran.coolweather.util.Utility;
@@ -132,5 +133,7 @@ public class WeatherActivity extends Activity implements View.OnClickListener{
         currentDataText.setText(prefs.getString("current_data",""));
         weatherInfoLayout.setVisibility(View.VISIBLE);
         cityNameText.setVisibility(View.VISIBLE);
+        Intent intent = new Intent(this, AutoUpdateService.class);
+        startService(intent);
     }
 }
